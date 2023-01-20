@@ -38,10 +38,15 @@ nav {
 .card {
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .card--img {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 9px;
+  max-height: 235px;
 }
 .card--stats {
   display: flex;
@@ -49,4 +54,11 @@ nav {
 }
 .card--star {
   height: 14px;
+}
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  margin-inline: 20px;
 }

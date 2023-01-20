@@ -3,21 +3,22 @@ import React from "react";
 import star from "../assets/Star1.png";
 
 export default function Card({
-  img,
-  rating,
-  reviewCount,
-  country,
   title,
+  description,
   price,
+  coverImg,
+  stats,
+  location,
+  openSpots,
 }) {
   return (
     <div className="card">
-      <img src={img} alt="" className="card--img" />
+      <img src={`../src/assets/${coverImg}`} alt="" className="card--img" />
       <div className="card--stats">
         <img src={star} alt="" className="card--star" />
-        <span>{rating}</span>
-        <span className="gray">({reviewCount}) •</span>
-        <span className="gray">/{country}</span>
+        <span>{stats.rating}</span>
+        <span className="gray">({stats.reviewCount}) •</span>
+        <span className="gray">/{location}</span>
       </div>
       <p>{title}</p>
       <p>
